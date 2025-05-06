@@ -5,7 +5,7 @@ import { FaPhoneAlt } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className='w-full px-20 pt-16 pb-8 bg-transparent text-neutral-600 tracking-wide uppercase'>
+    <footer className='w-full px-5 pb-8 bg-transparent text-neutral-600 tracking-wide uppercase'>
         <div className='max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8 md:items-start'>
             {/* Left: Direct Contact */}
             <div>
