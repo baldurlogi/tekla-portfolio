@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Bridal from './pages/Bridal';
 import About from './pages/About';
 import Blog from './pages/Blog';
+import ProjectGallery from './pages/ProjectGallery';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/blog' element={<Blog />} />
+            <Route path='/gallery/:projectId' element={<ProjectGallery />} />
           </Routes>
         </main>
         <Footer />

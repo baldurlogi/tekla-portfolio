@@ -13,6 +13,12 @@ const Contact = () => {
     message: ''
   });
 
+  const [status, setStatus] = useState({
+    submitting: false,
+    submitted: false,
+    error: null
+  });
+
   const validateField = (name, value) => {
     switch (name) {
       case 'email':
@@ -51,24 +57,54 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+ 
     // Validate all fields
     const newErrors = {};
     Object.keys(formData).forEach(key => {
       newErrors[key] = validateField(key, formData[key]);
     });
-    
+
     setErrors(newErrors);
 
-    // Check if there are any errors
     if (Object.values(newErrors).some(error => error)) {
       return;
     }
 
-    // Proceed with form submission if no errors
-    console.log('Form submitted:', formData);
+    setStatus({ submitting: true, submitted: false, error: null });
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      setStatus({
+        submitting: false,
+        submitted: true,
+        error: null
+      });
+
+      // Clear form
+      setFormData({ name: '', email: '', message: '' });
+
+    } catch (error) {
+      setStatus({
+        submitting: false,
+        submitted: false,
+        error: error.message
+      });
+    }
   };
 
   return (
@@ -88,6 +124,18 @@ const Contact = () => {
           Based in Copenhagen - Available for booking worldwide.
         </p>
       </div>
+
+      {status.submitted && (
+        <div className="mb-6 p-4 bg-green-50 text-green-700 rounded-md">
+          Thank you for your message! I'll get back to you soon.
+        </div>
+      )}
+
+      {status.error && (
+        <div className="mb-6 p-4 bg-red-50 text-red-700 rounded-md">
+          {status.error}
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
@@ -164,9 +212,13 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="w-full px-4 py-2 bg-neutral-800 text-white rounded-md hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 transition-colors"
+          disabled={status.submitting}
+          className={`w-full px-4 py-2 bg-neutral-800 text-white rounded-md 
+            hover:bg-neutral-700 focus:outline-none focus:ring-2 
+            focus:ring-neutral-400 focus:ring-offset-2 transition-colors
+            ${status.submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
         >
-          Send Message
+          {status.submitting ? 'Sending...' : 'Send Message'}
         </button>
       </form>
     </div>

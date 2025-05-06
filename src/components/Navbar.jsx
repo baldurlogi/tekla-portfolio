@@ -49,6 +49,7 @@ const Navbar = () => {
         <Link
           to="/"
           className="text-xl font-semibold tracking-widest uppercase z-20"
+          onClick={closeMenu}
         >
           TEKLA
         </Link>
