@@ -8,29 +8,43 @@ import Bridal from './pages/Bridal';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import ProjectGallery from './pages/ProjectGallery';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  ScrollRestoration,
+  Outlet
+} from "react-router-dom";
+
+const Layout = () => {
+  return (
+    <div className='min-h-screen bg-[#f8f0e4] text-neutral-800'>
+      <Navbar />
+      <main className="pt-[5.5rem]">
+        <Outlet />
+      </main>
+      <Footer />
+      <ScrollRestoration />
+    </div>
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      { path: '/', element: <Home /> },
+      { path: '/gallery', element: <Gallery /> },
+      { path: '/bridal', element: <Bridal /> },
+      { path: '/about', element: <About /> },
+      { path: '/contact', element: <Contact /> },
+      { path: '/blog', element: <Blog /> },
+      { path: '/gallery/:projectId', element: <ProjectGallery /> },
+    ],
+  },
+]);
 
 function App() {
-
-  return (
-    <BrowserRouter>
-      <div className='min-h-screen bg-[#f8f0e4] text-neutral-800'>
-        <Navbar />
-        <main className="pt-[5.5rem]">
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/gallery' element={<Gallery />} />
-            <Route path='/bridal' element={<Bridal />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/blog' element={<Blog />} />
-            <Route path='/gallery/:projectId' element={<ProjectGallery />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

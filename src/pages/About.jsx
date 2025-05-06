@@ -18,7 +18,7 @@ const About = () => {
           `}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           alt="Tekla Kristjánsdóttir headshot"
-          className="w-full rounded-md object-cover shadow"
+          className="w-full max-w-[400px] rounded-md object-cover shadow"
         />
         <div>
           <h2 className="text-2xl uppercase tracking-widest mb-4">About Tekla</h2>
