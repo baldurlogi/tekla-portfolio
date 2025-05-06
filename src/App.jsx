@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <div className='min-h-screen bg-[#f8f0e4] text-neutral-800'>
         <Navbar />
-        <main className="min-h-screen flex items-center justify-center text-3xl uppercase">
+        <main className="pt-[5.5rem]">
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/gallery' element={<Gallery />} />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaPhoneAlt } from 'react-icons/fa';
 
 
 const Footer = () => {
@@ -14,6 +15,7 @@ const Footer = () => {
                 <a href="mailto:teklakristjans@gmail.com" className='hover:text-black transition-colors'>
                     teklakristjans@gmail.com
                 </a>
+                <InfoLine icon={FaPhoneAlt} label="Phone"  value="+45 60 90 76 24" link="tel:+3460907624" />
             </div>
 
             {/* Right: Social Links */}
@@ -54,5 +56,22 @@ const Footer = () => {
     </footer>
   )
 }
+
+function InfoLine({ icon: Icon, value, link }) {
+    const content = (
+      <>
+        <Icon className="w-4 h-4 flex-none" />
+        <span className="font-small">{value}</span>
+      </>
+    );
+
+    return link ? (
+      <a href={link} className="flex items-center gap-3 hover:underline">
+        {content}
+      </a>
+    ) : (
+      <p className="flex items-center gap-3">{content}</p>
+    );
+  }
 
 export default Footer
