@@ -54,7 +54,7 @@ const Home = () => {
           {[1,2,3].map(id => (
             <Link key={id} to={`/blog/post-${id}`} className="group">
               <article className="bg-white shadow-md hover:shadow-lg transition-shadow">
-                <img src={`/img/blog${id}.jpg`} alt="" />
+                <img src={image1} alt="" />
                 <div className="p-4">
                   <h3 className="font-semibold mb-2 group-hover:underline">
                     Blog post title #{id}

@@ -8,9 +8,9 @@ const Gallery = () => {
     <div className="max-w-6xl mx-auto p-4 py-16">
       <h1 className="text-3xl md:text-4xl uppercase tracking-widest mb-12 text-center">Projects</h1>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 group/list'>
         {PROJECTS.map(project => (
-          <article key={project.id} className="group">
+          <article key={project.id} className="group/item transition-opacity duration-300 group-hover/list:opacity-50 hover:!opacity-100">
             <Link to={`/gallery/${project.id}`}>
               <img
                 src={cld(project.coverImage, 1280)}
@@ -21,7 +21,7 @@ const Gallery = () => {
                 `}
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 alt={`${project.title} project`}
-                className="w-full aspect-[4/5] object-cover rounded-md shadow-lg hover:shadow-xl hover:opacity-80 transition-shadow"
+                className="w-full aspect-[4/5] object-cover rounded-md shadow-lg hover:shadow-xl transition-all duration-500 ease-in-out transform hover:scale-105"
                 loading="lazy"
               />
               <h2 className="mt-4 text-xl tracking-widest text-center">

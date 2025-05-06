@@ -22,20 +22,27 @@ const About = () => {
         />
         <div>
           <h2 className="text-2xl uppercase tracking-widest mb-4">About Tekla</h2>
-          <h3 className="text-xl font-semibold tracking-widest mb-2 underline underline-offset-4">°1</h3>
+          <h3 className="text-xl font-semibold tracking-widest mb-2 underline underline-offset-4">°1 Get to know me</h3>
           <p className="mb-4">
             My name is Tekla Kristjánsdóttir and i'm 25 years old. Born and raised in Reykjavík, Iceland but moved to Copenhagen the summer of 2021.
-
-            I'm a Nicci Welsh Makeup Academy graduate and a part of Nicci Welsh pro team. 
-
+          </p>
+          <p className="mb-4">
+            I'm a Nicci Welsh Makeup Academy graduate and a part of Nicci Welsh pro team.
+          </p>
+          <p className="mb-4">
             On another note I have a BSc in Software Engineering and am a 3rd year Brand Design student.
-
+          </p>
+          <p className="mb-4">
             English, danish or icelandic? your choice.
           </p>
-          <h3 className="text-xl font-semibold tracking-widest mb-2 underline underline-offset-4">°2</h3>
-          <p>
-            I'm a professional makeup artist & hair stylist, over the past years I've had the opportunity to work with the most amazing people from all parts of the industry. 
+          <h3 className="text-xl font-semibold tracking-widest mb-2 underline underline-offset-4">°2 Past experience</h3>
+          <p className="mb-4">
+            I'm a professional makeup artist & hair stylist, over the past years I've had the opportunity to work with the most amazing people from all parts of the industry.
+          </p>
+          <p className="mb-4">
             My experience expands to TV, fashion shoots, music videos & celebrities, four CPHFW seasons and ofcourse all the beautiful brides I've been so lucky to be a part of their special day ... and so much more.
+          </p>
+          <p className="mb-4">
             Scroll down for detailed experience.
           </p>
         </div>
