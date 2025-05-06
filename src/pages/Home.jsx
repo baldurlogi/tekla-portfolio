@@ -3,11 +3,20 @@ import { Link } from 'react-router-dom'
 import image1 from '../assets/IMG_2688.jpg';
 
 const Home = () => {
+   const scrollToFeatured = () => {
+    document.getElementById('featured').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+   }
+
+
   return (
     <div className="flex flex-col gap-24">
 
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="min-h-screen flex items-center justify-center bg-[#f8f0e4]">
+      <section className="min-h-screen flex items-center justify-center bg-[#f8f0e4] pb-60 relative">
+      <div className="flex flex-col items-center">
         <h1
           className="text-center leading-tight uppercase tracking-widest text-3xl md:text-5xl animate-[fadeUp_.8s_ease-out_forwards]"
         >
@@ -16,11 +25,38 @@ const Home = () => {
             Makeup Artist&nbsp;and Hair Stylist
           </span>
         </h1>
+
+        {/* Scroll Down Button */}
+        <div className="absolute bottom-32 flex flex-col mt-2">
+          <button
+            onClick={scrollToFeatured}
+            className="flex flex-col items-center mt-2 animate-bounce cursor-pointer transition-opacity hover:opacity-70"
+            aria-label="Scroll to signature looks"
+          >
+            <span className="text-sm text-neutral-600 tracking-wide animate-pulse">
+              Click to see my work
+            </span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-neutral-800"
+            >
+              <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
       </section>
 
       {/* ── Featured Gallery Strip ───────────────────────────────────── */}
       <section id="featured" className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold uppercase tracking-widest text-center">Signature Looks</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold uppercase tracking-widest text-center mb-4 mt-6">Signature Looks</h2>
         {/* swap static imgs for <Link to="/gallery">…</Link> thumbnails, a slider, etc. */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           <img src={image1} alt="" className="aspect-square object-cover" />
@@ -49,7 +85,7 @@ const Home = () => {
 
       {/* ── Latest Blog Teasers ──────────────────────────────────────── */}
       <section className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold uppercase tracking-widest text-center">Latest On The Blog</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold uppercase tracking-widest text-center mb-4">Latest On The Blog</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[1,2,3].map(id => (
             <Link key={id} to={`/blog/post-${id}`} className="group">
