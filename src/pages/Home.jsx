@@ -76,7 +76,9 @@ const Home = () => {
           </p>
           <Link
             to="/bridal"
-            className="mt-6 inline-block px-8 py-3 bg-[#fadcae] text-white tracking-wider uppercase hover:opacity-90"
+            className="inline-block px-8 py-3 bg-neutral-800 text-white rounded-md
+                     uppercase tracking-wider hover:bg-neutral-700 transition-colors
+                     mt-8"
           >
             Explore bridal services
           </Link>

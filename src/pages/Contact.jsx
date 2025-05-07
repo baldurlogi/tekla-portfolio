@@ -213,8 +213,8 @@ const Contact = () => {
         <button
           type="submit"
           disabled={status.submitting}
-          className={`w-full px-4 py-2 bg-neutral-800 text-white rounded-md 
-            hover:bg-neutral-700 focus:outline-none focus:ring-2 
+          className={`w-full px-4 py-2 bg-neutral-800 text-white rounded-md
+            hover:bg-neutral-700 focus:outline-none focus:ring-2
             focus:ring-neutral-400 focus:ring-offset-2 transition-colors
             ${status.submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
         >
