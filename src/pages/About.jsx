@@ -71,8 +71,9 @@ const titleMap = {
   brands: 'Brands',
   music: 'Music',
   magazines: 'Magazines',
-  events: 'Events & Fashion Week',
+  events: 'Events',
   tvFilm: 'TV & Film',
+  fashionWeek: 'Fashion Week',
 };
 
 function Category({ title, items }) {

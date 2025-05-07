@@ -4,25 +4,34 @@ import { BRIDAL_IMAGES } from '../constants/images'
 import { cld } from '../lib/cdn'
 
 const Bridal = () => {
+  const directions = ['Top', 'Right', 'Bottom', 'Left'];
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
       {/* Gallery Grid */}
       <div className="columns-2 md:columns-3 lg:columns-4 gap-4 mb-20 space-y-4">
-        {BRIDAL_IMAGES.map(id => (
-          <img
-            key={id}
-            src={cld(id, 640)}
-            srcSet={`
-              ${cld(id, 320)} 320w,
-              ${cld(id, 640)} 640w,
-              ${cld(id, 1280)} 1280w
-            `}
-            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            alt="Bridal makeup by Tekla"
-            className="w-full object-cover rounded-md shadow-md hover:shadow-lg transition-shadow"
-            loading="lazy"
-          />
-        ))}
+        {BRIDAL_IMAGES.map((id, index) => {
+          const direction = directions[index % directions.length]; // cycles through directions
+          return (
+            <img
+              key={id}
+              src={cld(id, 640)}
+              srcSet={`
+                ${cld(id, 320)} 320w,
+                ${cld(id, 640)} 640w,
+                ${cld(id, 1280)} 1280w
+              `}
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              alt="Bridal makeup by Tekla"
+              className="w-full object-cover rounded-md shadow-md hover:shadow-lg opacity-0"
+              style={{
+                animation: `fadeInFrom${direction} 0.8s ease-out forwards`,
+                animationDelay: `${index * 0.2}s`
+              }}
+              loading="lazy"
+            />
+          );
+        })}
       </div>
 
       {/* Content Section */}

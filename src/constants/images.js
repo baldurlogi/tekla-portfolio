@@ -17,97 +17,141 @@ export const PROJECTS = [
       id: 'leblue-magazine',
       title: 'LEBLUE MAGAZINE',
       coverImage: 'IMG_2688_jgjtcw',
-      images: ['IMG_2688_jgjtcw', 'IMG_2108_wbkhtz', 'IMG_2106_sxt1zj']
+      images: ['IMG_2688_jgjtcw', 'IMG_2108_wbkhtz', 'IMG_2106_sxt1zj'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'nomad-x-marie-jedig',
       title: 'NOMAD X MARIE JEDIG',
       coverImage: 'mm01_mo86gy',
-      images: ['mm01_mo86gy', 'mm02_xekwd4', 'mm03_bolajj']
+      images: ['mm01_mo86gy', 'mm02_xekwd4', 'mm03_bolajj'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'the-garment',
       title: 'THE GARMENT',
       coverImage: 'mm04_p3rbew',
-      images: ['mm04_p3rbew', 'mm05_tgaajh', 'mm06_msds2p']
+      images: ['mm04_p3rbew', 'mm05_tgaajh', 'mm06_msds2p'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'rosel',
       title: 'RÓSEL',
       coverImage: 'mm07_becfbd',
-      images: ['mm07_becfbd', 'mm08_r8qehl']
+      images: ['mm07_becfbd', 'mm08_r8qehl'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'photo-vogue',
       title: 'PHOTO VOGUE',
       coverImage: 'IMG_2688_jgjtcw',
-      images: ['IMG_2688_jgjtcw', 'IMG_2108_wbkhtz', 'IMG_2106_sxt1zj']
+      images: ['IMG_2688_jgjtcw', 'IMG_2108_wbkhtz', 'IMG_2106_sxt1zj'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'annoanno-aw24',
       title: 'ANNÓANNÓ AW24',
       coverImage: 'mm01_mo86gy',
-      images: ['mm01_mo86gy', 'mm02_xekwd4', 'mm03_bolajj']
+      images: ['mm01_mo86gy', 'mm02_xekwd4', 'mm03_bolajj'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'costume-dk',
       title: 'COSTUME DK',
       coverImage: 'mm04_p3rbew',
-      images: ['mm04_p3rbew', 'mm05_tgaajh', 'mm06_msds2p']
+      images: ['mm04_p3rbew', 'mm05_tgaajh', 'mm06_msds2p'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'jasmin',
       title: 'JASMIN',
       coverImage: 'mm07_becfbd',
-      images: ['mm07_becfbd', 'mm08_r8qehl']
+      images: ['mm07_becfbd', 'mm08_r8qehl'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'stamm-exchange',
       title: 'STAMM EXCHANGE',
       coverImage: 'IMG_2688_jgjtcw',
-      images: ['IMG_2688_jgjtcw', 'IMG_2108_wbkhtz', 'IMG_2106_sxt1zj']
+      images: ['IMG_2688_jgjtcw', 'IMG_2108_wbkhtz', 'IMG_2106_sxt1zj'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'photo-vogue-2',
       title: 'PHOTO VOGUE',
       coverImage: 'mm01_mo86gy',
-      images: ['mm01_mo86gy', 'mm02_xekwd4', 'mm03_bolajj']
+      images: ['mm01_mo86gy', 'mm02_xekwd4', 'mm03_bolajj'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'stundom',
       title: 'STUNDOM',
       coverImage: 'mm04_p3rbew',
-      images: ['mm04_p3rbew', 'mm05_tgaajh', 'mm06_msds2p']
+      images: ['mm04_p3rbew', 'mm05_tgaajh', 'mm06_msds2p'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'troels-gustavsen',
       title: 'TROELS GUSTAVSEN',
       coverImage: 'mm07_becfbd',
-      images: ['mm07_becfbd', 'mm08_r8qehl']
+      images: ['mm07_becfbd', 'mm08_r8qehl'],
+      photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'anthon-edwards',
       title: 'ANTHON EDWARDS',
       coverImage: 'mm07_becfbd',
-      images: ['mm07_becfbd', 'mm08_r8qehl']
+      images: ['mm07_becfbd', 'mm08_r8qehl'],photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'kanya',
       title: 'KANYA',
       coverImage: 'mm07_becfbd',
-      images: ['mm07_becfbd', 'mm08_r8qehl']
+      images: ['mm07_becfbd', 'mm08_r8qehl'],photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'sophia-khaled',
       title: 'SOPHIA KHALED',
       coverImage: 'mm07_becfbd',
-      images: ['mm07_becfbd', 'mm08_r8qehl']
+      images: ['mm07_becfbd', 'mm08_r8qehl'],photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'meredith',
       title: 'MEREDITH',
       coverImage: 'mm07_becfbd',
-      images: ['mm07_becfbd', 'mm08_r8qehl']
+      images: ['mm07_becfbd', 'mm08_r8qehl'],photographer: 'distilledpaper',
+      model: 'kanyawhussy',
+      hmua: 'teklakristjans',
     },
     {
       id: 'nanna',

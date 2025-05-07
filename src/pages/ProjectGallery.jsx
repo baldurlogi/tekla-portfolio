@@ -23,6 +23,7 @@ const ProjectGallery = () => {
           />
         ))}
       </div>
+      <h3>Photographer </h3>
     </div>
   );
 };
