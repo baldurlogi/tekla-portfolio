@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import image1 from '../assets/IMG_2688.jpg';
+import Bentobox from '../components/Bentobox';
 
 const Home = () => {
    const scrollToFeatured = () => {
@@ -54,9 +55,10 @@ const Home = () => {
       </div>
       </section>
 
+
       {/* ── Featured Gallery Strip ───────────────────────────────────── */}
       <section id="featured" className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold uppercase tracking-widest text-center mb-4 mt-6">Signature Looks</h2>
+        <h2 className="text-3xl md:text-4xl uppercase tracking-widest mb-12 text-center">Signature Looks</h2>
         {/* swap static imgs for <Link to="/gallery">…</Link> thumbnails, a slider, etc. */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           <img src={image1} alt="" className="aspect-square object-cover" />
@@ -67,10 +69,13 @@ const Home = () => {
         <Link to="/gallery" className="mt-6 inline-block underline">View full gallery →</Link>
       </section>
 
+      {/* ── Bentobox ───────────────────────────────────────────────── */}
+      <Bentobox />
+
       {/* ── Bridal Call-out ──────────────────────────────────────────── */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold uppercase tracking-widest text-center">Bridal Beauty</h2>
+          <h2 className="text-3xl md:text-4xl uppercase tracking-widest mb-12 text-center">Bridal Beauty</h2>
           <p className="mt-4 text-neutral-700">
             From soft romantic to modern editorial, bespoke bridal looks that last all day.
           </p>
@@ -87,7 +92,7 @@ const Home = () => {
 
       {/* ── Latest Blog Teasers ──────────────────────────────────────── */}
       <section className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold uppercase tracking-widest text-center mb-4">Latest On The Blog</h2>
+        <h2 className="text-3xl md:text-4xl uppercase tracking-widest mb-12 text-center">Latest On The Blog</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[1,2,3].map(id => (
             <Link key={id} to={`/blog/post-${id}`} className="group">
@@ -110,7 +115,7 @@ const Home = () => {
 
       {/* ── Contact CTA strip ────────────────────────────────────────── */}
       <section className="bg-[#f8f0e4] py-20 text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold uppercase tracking-widest text-center">Ready to Book?</h2>
+        <h2 className="text-3xl md:text-4xl uppercase tracking-widest mb-6 text-center">Ready to Book?</h2>
         <p className="mt-4 text-neutral-700">
           Let’s craft the perfect look for your shoot, event, or wedding.
         </p>

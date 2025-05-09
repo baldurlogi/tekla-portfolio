@@ -1,6 +1,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Bentobox from './components/Bentobox';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import Home from './pages/Home';
