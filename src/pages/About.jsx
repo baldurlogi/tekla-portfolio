@@ -1,10 +1,16 @@
 import React from 'react'
 import { COLLABORATIONS } from '../constants/collaborations';
 import { cld } from '../lib/cdn';
+import Meta from '../components/Meta';
 
 const About = () => {
   return (
-    <article className="max-w-5xl mx-auto px-4 py-16 leading-relaxed">
+    <>
+      <Meta
+        title="About"
+        description="Meet Tekla Kristjánsdóttir, Copenhagen-based makeup artist and hair stylist with experience in fashion weeks, editorial shoots, and luxury bridal services."
+      />
+      <article className="max-w-5xl mx-auto px-4 py-16 leading-relaxed">
 
       {/* ── Bio / portrait block  ─────────────────────── */}
       <section className="grid md:grid-cols-2 gap-8 items-start">
@@ -62,7 +68,8 @@ const About = () => {
         </div>
       </section>
 
-    </article>
+      </article>
+    </>
   );
 }
 
